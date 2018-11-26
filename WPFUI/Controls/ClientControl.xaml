@@ -4,32 +4,121 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:WPFUI.Controls"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              FontFamily="Open Sans"
              FontSize="18"
-             d:DesignHeight="425" d:DesignWidth="300">
+             d:DesignHeight="525" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <!-- Row 0 -->
+        <TextBlock FontSize="24">Clients</TextBlock>
+
+        <!-- Row 1 -->
         <StackPanel Orientation="Horizontal"
-                    Grid.Row="0"
+                    Grid.Row="1"
                     Margin="5 5 5 10">
             <StackPanel Orientation="Vertical">
                 <TextBlock>Client</TextBlock>
                 <ComboBox x:Name="ClientDropDown"
-                          Width="150"/>
+                          Width="150" />
             </StackPanel>
-            <Button x:Name="EditButton">Edit</Button>
-            <Button x:Name="NewButton">New</Button>
+            <Button x:Name="EditButton"
+                    VerticalAlignment="Bottom"
+                    Padding="5 2"
+                    Margin="5 0">
+                Edit
+            </Button>
+            <Button x:Name="NewButton"
+                    VerticalAlignment="Bottom"
+                    Padding="5 2"
+                    Margin="5 0">
+                New
+            </Button>
         </StackPanel>
-        
+
+        <!-- Row 2 -->
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="2"
+                    Margin="5 5 5 10">
+            <TextBlock>Name</TextBlock>
+            <TextBox x:Name="TitleTextBox" />
+        </StackPanel>
+
+        <!-- Row 3 -->
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="3"
+                    Margin="5 5 5 10">
+            <TextBlock>Email Address</TextBlock>
+            <TextBox x:Name="EmailTextBox" />
+        </StackPanel>
+
+        <!-- Row 4 -->
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="4"
+                    Margin="5 5 5 10">
+            <TextBlock>Hourly Rate</TextBlock>
+            <TextBox x:Name="HourlyRateTextBox" />
+        </StackPanel>
+
+        <!-- Row 5  -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="5"
+                    Margin="5 5 5 10">
+            <CheckBox x:Name="PreBillCheckBox"
+                      Margin="0 0 10 0">
+                Pre-bill Client
+            </CheckBox>
+            <CheckBox x:Name="HasCutOffCheckBox">
+                Cut Off Client
+            </CheckBox>
+        </StackPanel>
+
+        <!-- Row 6 -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="6"
+                    Margin="5 5 5 10">
+            <StackPanel Orientation="Vertical"
+                        Margin="0 0 10 0">
+                <TextBlock>Cut Off Number</TextBlock>
+                <TextBox x:Name="CutOffTextBox" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock>Minimum Hours</TextBlock>
+                <TextBox x:Name="MinimumHoursTextBox" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Row 7 -->
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="7"
+                    Margin="5 5 5 10">
+            <StackPanel Orientation="Vertical"
+                        Margin="0 0 10 0">
+                <TextBlock>Billing Increment</TextBlock>
+                <TextBox x:Name="BillingIncrementTextBox" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock>Round Up (min.)</TextBlock>
+                <TextBox x:Name="RoundUpAfterXMinuteTextBox" />
+            </StackPanel>
+        </StackPanel>
+
+        <Button x:Name="SubmitForm"
+                Grid.Row="8"
+                Margin="5 5 5 10">
+            Submit
+        </Button>
     </Grid>
 </UserControl>

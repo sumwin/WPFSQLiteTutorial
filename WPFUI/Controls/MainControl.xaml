@@ -7,9 +7,10 @@
              mc:Ignorable="d"
              FontFamily="Open Sans"
              FontSize="18"
-             d:DesignHeight="425" d:DesignWidth="300">
+             d:DesignHeight="500" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -19,16 +20,19 @@
         </Grid.RowDefinitions>
         
         <!-- Row 0 -->
+        <TextBlock FontSize="24">Time Entry</TextBlock>
+        
+        <!-- Row 1 -->
         <StackPanel Orientation="Vertical"
-                    Grid.Row="0"
+                    Grid.Row="1"
                     Margin="5 5 5 10">
             <TextBlock>Client</TextBlock>
             <ComboBox x:Name="ClientDropDown"/>
         </StackPanel>
         
-        <!-- Row 1 -->
+        <!-- Row 2 -->
         <StackPanel Orientation="Horizontal"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Margin="5 5 5 10">
             <StackPanel Orientation="Vertical"
                         Margin="0 0 20 0">
@@ -42,17 +46,17 @@
                 >Start Timer</Button>
         </StackPanel>
         
-        <!-- Row 2 -->
-        <StackPanel Orientation="Vertical"
-                    Grid.Row="2"
-                    Margin="5 5 5 10">
-            <TextBlock>title</TextBlock>
-            <TextBox x:Name="TitleTextBox"/>
-        </StackPanel>
-        
         <!-- Row 3 -->
         <StackPanel Orientation="Vertical"
                     Grid.Row="3"
+                    Margin="5 5 5 10">
+            <TextBlock>Title</TextBlock>
+            <TextBox x:Name="TitleTextBox"/>
+        </StackPanel>
+        
+        <!-- Row 4 -->
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="4"
                     Margin="5 5 5 10">
             <TextBlock>Description</TextBlock>
             <TextBox x:Name="DescriptionTextBox"
@@ -61,9 +65,9 @@
                      Height="80"/>
         </StackPanel>
         
-        <!-- Row 4 -->
+        <!-- Row 5 -->
         <Button x:Name="SubmitForm"
-                Grid.Row="4"
+                Grid.Row="5"
                 Margin="5 5 5 10"
                 Padding="0 20">
             Submit
