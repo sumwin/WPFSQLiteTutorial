@@ -1,0 +1,60 @@
+<UserControl x:Class="WPFUI.Controls.AboutControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WPFUI.Controls"
+             mc:Ignorable="d"
+             FontSize="18"
+             Background="White"
+             d:DesignHeight="525" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Row 0 -->
+        <TextBlock FontSize="24" Foreground="Black" Grid.Row="0">About</TextBlock>
+
+        <!-- Row 1 -->
+        <TextBlock FontSize="42" Grid.Row="1" HorizontalAlignment="Center" Margin="0 20" Foreground="#ffef6423"
+                   FontFamily="Open Sans SemiBold">
+            Bill Time App
+        </TextBlock>
+
+        <!-- Row 2 -->
+        <TextBlock FontSize="22" Grid.Row="2" HorizontalAlignment="Center" Margin="0 0 0 20" Foreground="#ffef6423"
+                   FontFamily="Open Sans SemiBold">
+            By SumWin+
+        </TextBlock>
+
+        <!-- Row 3 -->
+        <TextBlock FontSize="22" Grid.Row="3" HorizontalAlignment="Center" Margin="0 0 0 20" Foreground="#ffef6423"
+                   FontFamily="Open Sans" TextWrapping="Wrap">
+            This application was built to show off SQLite as well as the basics of WPF. It is a demo application to help a developer test what they have learned from the basics of these two technologies
+        </TextBlock>
+
+        <!-- Row 4 -->
+        <StackPanel Orientation="Vertical" Grid.Row="4" Margin="0 20 0 20">
+            <TextBlock FontSize="22" Grid.Row="4" HorizontalAlignment="Center" Foreground="#ffef6423"
+                       FontFamily="Open Sans SemiBold">
+                For more information:
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center">
+                <Hyperlink NavigateUri="https://www.skymagenta.com">
+                           https:// www.skymagenta.com
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+
+
+</UserControl>
